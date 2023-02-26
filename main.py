@@ -29,8 +29,8 @@ def search_tweet():
 
     if len(timelines) != 0:
 
-        # 1ヶ月前の時刻を取得
-        latest_date = datetime.now(timezone.utc) + timedelta(days=-31)
+        # 1時間前の時刻を取得
+        latest_date = datetime.now(timezone.utc) + timedelta(hours=-1)
 
         for tl in timelines:
             if tl.created_at >= latest_date:
